@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- เวลาใส่ : แนะนำให้ใส่ตัวเดียวกัน เหมือนกัน -->
+    <div th:replace="frontend/fragments/header::header"></div>
+    <title layout:title-pattern="$CONTENT_TITLE |  $LAYOUT_TITLE">Spring Boot App</title>
+</head>
+
+<body>
+    <!-- จะจัดหน้าควรตั้งตรงนี้ -->
+    <div th:replace="frontend/fragments/navigation::navigation"></div>
+    <div class="container">
+        <!--พวกPageต่างๆ -->
+        <div layout:fragment="content"></div>
+    </div>
+    <div th:replace="frontend/fragments/footer::footer"></div>
+</body>
+
+</html>
